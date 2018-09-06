@@ -1,0 +1,85 @@
+<% include partials/header %>
+    <div class="container" style="margin-left: 250px;margin-bottom: 150px">
+        <h1>Wanna connect with your friend?</h1>
+        <h3>Search your friend's name or email or phone number</h3>
+        <div class="row">
+            <div class="col-sm-7">
+                <form class="mar-15">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <div class="text-effect">
+                                    <span>First Name</span>
+                                    <input type="text" class="form-control focus-text" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <div class="text-effect">
+                                    <span>Last Name</span>
+                                    <input type="text" class="form-control focus-text" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <div class="text-effect">
+                                    <span>Email</span>
+                                    <input type="email" class="form-control focus-text" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <div class="text-effect">
+                                    <span>Phone no</span>
+                                    <input type="email" class="form-control focus-text" />
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="text-align: center;margin-bottom: 200px">
+        <h1>Things You Might Wanna DO!!</h1>
+        <div>
+            <a href="/all" class="btn btn-primary" style="width:200px;margin-top: 30px"> See All the users </a>
+        </div>
+        <div>
+            <a href="/add_photo" class="btn btn-primary" style="width:200px;margin-top: 30px"> Add new Photos </a>
+        </div>
+
+        <div>
+            <a href="/add_interest" class="btn btn-primary" style="width:200px;margin-top: 30px"> Add your interests </a>
+        </div>
+
+    </div>
+
+    <script>
+        $('.focus-text').focus(function () {
+            $(this).closest('div').addClass('focus-t');
+        })
+        $('.focus-text').blur(function () {
+            if ($('.focus-text').length > 0 && $('.focus-text').val() != '') {
+                $(this).closest('div').addClass('focus-t');
+            }
+            else {
+                $(this).closest('div').removeClass('focus-t');
+            }
+        })
+
+    </script>
+    <% include partials/footer %>
+
+        <!-- <a href="/all">see all the users</a>
+    <a href="/add_photo">Add photo</a> -->
+        <!-- <div class="container" style="height: 100px">
+            
+        </div> -->

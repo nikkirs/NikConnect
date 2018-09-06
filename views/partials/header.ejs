@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>NikConnect</title>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<style>
+		.focus-t span {
+			bottom: 36px !important;
+			;
+			color: #d74141;
+			font-size: 15px;
+			transition: all 0.3s ease 0s;
+			z-index: 1;
+		}
+
+		.focus-t input:focus {
+			border-color: #d74141;
+		}
+
+		.text-effect input {
+			border: none;
+			border-bottom: 2px solid #073951 !important;
+			border-radius: 0;
+			position: absolute;
+			bottom: 0;
+			border-style: none none solid;
+			border-width: 0 0 2px;
+			box-shadow: none;
+			z-index: 2;
+			background-color: transparent;
+		}
+
+		.form-control:focus {
+			border-bottom: 2px solid #073951 !important;
+			box-shadow: none;
+			outline: 0 none;
+			transition: 0.6s;
+		}
+
+		.text-effect {
+			position: relative;
+			height: 70px;
+		}
+
+		.text-effect span {
+			bottom: 3px;
+			position: absolute;
+			z-index: 1;
+		}
+	</style>
+</head>
+
+<body>
+
+
+	<!--navbar-->
+	<div class="container" style="width: 98%;margin-bottom: 30px">
+		<nav class="navbar navbar-inverse navbar-static-top" style="margin-bottom: 0">
+			<div class="container">
+				<div class="navbar-header">
+					<a href="/" class="navbar-brand">NikConnect</a>
+				</div>
+				<div class="nav navbar-nav">
+					<li>
+						<a href="/home">HOME</a>
+					</li>
+					<li>
+						<a href="/contact">CONTACT</a>
+					</li>
+				</div>
+				<div class="nav navbar-nav navbar-right">
+					<%if(!currentUser){%>
+						<li>
+							<a href="/login">Log In</a>
+						</li>
+						<li>
+							<a href="/register">Sign Up</a>
+						</li>
+						<%}else{%>
+							<li>
+								<a href="#">Signed in as
+									<%=currentUser.username%>
+								</a>
+							</li>
+							<li>
+								<a href="/logout">Log Out</a>
+							</li>
+							<%}%>
+				</div>
+			</div>
+		</nav>
+	</div>

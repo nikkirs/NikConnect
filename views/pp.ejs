@@ -1,0 +1,21 @@
+<% include partials/header %>
+    <div class="container" style="width:90%;margin:40px auto">
+        <h2 style="text-align:center">all photos</h2>
+        <div class="row text-center" style="display:flex;flex-wrap:wrap">
+            <%a.forEach(function(d){%>
+
+                <div class="col-lg-4 col-sm-8">
+                    <div class="thumbnail">
+                        <img src=" <%=d.image_url%>">
+                        <div class="caption">
+                            <a href="/like/<%=d.photo_id%>">like</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <%})%>
+        </div>
+    </div>
+
+    <% include partials/footer %>
